@@ -13,13 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topHeaderView: UILabel!
     @IBOutlet weak var topTitleLabel: UILabel!
-    
     @IBOutlet weak var bottomToolbar: UIToolbar!
-    
-    
     @IBOutlet weak var topHeaderHeight: NSLayoutConstraint!
     @IBOutlet weak var toolbarBottomSpace: NSLayoutConstraint!
-    
     
     private var headerHidght: CGFloat = 0
     private lazy var swipeToHidden = SwipeToHidden()

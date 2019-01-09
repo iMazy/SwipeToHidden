@@ -13,6 +13,7 @@
 		64FEA89021E5F1540092A5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FEA88F21E5F1540092A5D7 /* Assets.xcassets */; };
 		64FEA89321E5F1540092A5D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FEA89121E5F1540092A5D7 /* LaunchScreen.storyboard */; };
 		64FEA89C21E5F2610092A5D7 /* SwipeToHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEA89B21E5F2610092A5D7 /* SwipeToHidden.swift */; };
+		64FEA89E21E6027A0092A5D7 /* swipeToHidden.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64FEA89D21E6027A0092A5D7 /* swipeToHidden.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		64FEA89221E5F1540092A5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64FEA89421E5F1540092A5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64FEA89B21E5F2610092A5D7 /* SwipeToHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToHidden.swift; sourceTree = "<group>"; };
+		64FEA89D21E6027A0092A5D7 /* swipeToHidden.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = swipeToHidden.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				64FEA88F21E5F1540092A5D7 /* Assets.xcassets */,
 				64FEA89121E5F1540092A5D7 /* LaunchScreen.storyboard */,
 				64FEA89421E5F1540092A5D7 /* Info.plist */,
+				64FEA89D21E6027A0092A5D7 /* swipeToHidden.gif */,
 			);
 			path = SwipeToHidden;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64FEA89E21E6027A0092A5D7 /* swipeToHidden.gif in Resources */,
 				64FEA89321E5F1540092A5D7 /* LaunchScreen.storyboard in Resources */,
 				64FEA89021E5F1540092A5D7 /* Assets.xcassets in Resources */,
 				64FEA88E21E5F1530092A5D7 /* Main.storyboard in Resources */,
