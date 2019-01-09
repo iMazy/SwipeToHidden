@@ -78,7 +78,7 @@ class SwipeToHidden: NSObject {
 }
 
 // MARK: - UIScrollViewDelegate
-extension SwipeToHidden: UIScrollViewDelegate {
+extension SwipeToHidden: UITableViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         beginDragAtPosition(scrollView.contentOffset.y + scrollView.contentInset.top)

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,71 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeToHidden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P0V-9l-RGc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tmq-jo-MSE"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSp-og-ahd">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="save" id="OEl-G1-gnS"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WhU-kj-BPg"/>
+                                    <barButtonItem systemItem="cancel" id="qWX-Hh-GOK"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEU-Mx-1lh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OU-yo-2fq">
+                                        <rect key="frame" x="132" y="44.5" width="111.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92311400180000003" green="0.34965014459999999" blue="0.34899914259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3OU-yo-2fq" secondAttribute="bottom" constant="30" id="BMF-LZ-Yp4"/>
+                                    <constraint firstItem="3OU-yo-2fq" firstAttribute="centerX" secondItem="YEU-Mx-1lh" secondAttribute="centerX" id="EWa-pT-h5L"/>
+                                    <constraint firstAttribute="height" constant="100" id="sbh-8L-YXk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P0V-9l-RGc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B1f-K9-fbG"/>
+                            <constraint firstAttribute="trailing" secondItem="YEU-Mx-1lh" secondAttribute="trailing" id="NQ4-Uz-xav"/>
+                            <constraint firstItem="YEU-Mx-1lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RLu-8b-4Fc"/>
+                            <constraint firstItem="XSp-og-ahd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g7l-tr-nu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XSp-og-ahd" secondAttribute="bottom" id="hj6-xW-DCi"/>
+                            <constraint firstItem="P0V-9l-RGc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mQH-ea-aPa"/>
+                            <constraint firstItem="P0V-9l-RGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qkh-b6-k0o"/>
+                            <constraint firstItem="YEU-Mx-1lh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rfT-QD-jOR"/>
+                            <constraint firstItem="P0V-9l-RGc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ubI-Cc-Bdr"/>
+                            <constraint firstItem="XSp-og-ahd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vEN-ZC-MH5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomToolbar" destination="XSp-og-ahd" id="jkT-JA-rAa"/>
+                        <outlet property="tableView" destination="P0V-9l-RGc" id="ea9-XB-n0Y"/>
+                        <outlet property="toolbarBottomSpace" destination="hj6-xW-DCi" id="aEo-5l-rIt"/>
+                        <outlet property="topHeaderHeight" destination="sbh-8L-YXk" id="Zua-OA-gDu"/>
+                        <outlet property="topHeaderView" destination="3OU-yo-2fq" id="7E9-dF-zWd"/>
+                        <outlet property="topTitleLabel" destination="3OU-yo-2fq" id="JWR-ct-vlZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
