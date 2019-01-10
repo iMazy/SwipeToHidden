@@ -31,8 +31,9 @@ class ViewController: UIViewController {
         tableView.contentInset.top = topInset
         tableView.scrollIndicatorInsets.top = topInset
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
-        tableView.delegate = swipeToHidden as UITableViewDelegate
         tableView.sectionHeaderHeight = 0.01
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     func updateViews() {
@@ -60,6 +61,22 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         cell.textLabel?.text = "Item \(indexPath.row + 1)"
         return cell
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+extension ViewController: UITableViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        swipeToHidden.xm_scrollViewWillBeginDragging(scrollView)
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        swipeToHidden.xm_scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        swipeToHidden.xm_scrollViewDidScroll(scrollView)
     }
 }
 

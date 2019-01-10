@@ -75,20 +75,16 @@ class SwipeToHidden: NSObject {
         
         delegate?.swipeToHidden(self, didUpdatePercentHiddenInteractively: interactive)
     }
-}
-
-// MARK: - UIScrollViewDelegate
-extension SwipeToHidden: UITableViewDelegate {
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func xm_scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         beginDragAtPosition(scrollView.contentOffset.y + scrollView.contentInset.top)
     }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    public func xm_scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         endDragAtTargetPosition(targetContentOffset.pointee.y + scrollView.contentInset.top, velocity: velocity.y)
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func xm_scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollToPosition(scrollView.contentOffset.y + scrollView.contentInset.top)
     }
 }
